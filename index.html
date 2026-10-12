@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario run web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="game-viewport">
+            <div id="game-world">
+                <div class="entity tile ground" style="left: 0px; top: 284px; width: 32px; height: 116px;"></div>
+                <div class="entity tile ground" style="left: 32px; top: 284px; width: 32px; height: 116px;"></div>
+                <div class="entity tile ground" style="left: 64px; top: 284px; width: 32px; height: 116px;"></div>
+                <div class="entity tile ground" style="left: 96px; top: 284px; width: 32px; height: 116px;"></div>
+                <div class="entity tile ground" style="left: 128px; top: 284px; width: 32px; height: 116px;"></div>
+                <div class="entity tile ground" style="left: 160px; top: 284px; width: 32px; height: 116px;"></div>
+                <div class="entity tile ground" style="left: 192px; top: 284px; width: 32px; height: 116px;"></div>
+                <div class="entity tile ground" style="left: 224px; top: 252px; width: 32px; height: 144px;"></div>
+                <div class="entity tile ground" style="left: 256px; top: 220px; width: 32px; height: 176px;"></div>
+                               
+                
+                
+                
+               
+                <div class="entity tile ground" style="left: 384px; top: 220px; width: 32px; height: 176px;"></div> 
+                <div class="entity tile ground" style="left: 416px; top: 220px; width: 32px; height: 176px;"></div> 
+                
+                <div class="entity tile ground" style="left: 480px; top: 220px; width: 32px; height: 32px;"></div> 
+                <div class="entity tile ground" style="left: 512px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 544px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 576px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 608px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 640px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 672px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 704px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 736px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 768px; top: 284px; width: 32px; height: 116px;"></div> 
+                <div class="entity tile ground" style="left: 800px; top: 284px; width: 32px; height: 116px;"></div> 
+               
+               
+
+<!-- Floating Blocks -->
+
+<div class="entity tile brick" style="left: 128px; top: 184px; width: 32px; height: 32px;"></div>
+<div class="entity tile question" style="left: 160px; top: 184px; width: 32px; height: 32px;"></div>
+<div class="entity tile brick" style="left: 192px; top: 184px; width: 32px; height: 32px;"></div>
+
+<div class="entity tile question" style="left: 544px; top: 184px; width: 32px; height: 32px;"></div>
+<div class="entity tile empty-block" style="left: 576px; top: 184px; width: 32px; height: 32px;"></div>
+<div class="entity tile question" style="left: 608px; top: 184px; width: 32px; height: 32px;"></div>
+
+<!-- Coins -->
+<div class="entity coin" style="left: 160px; top: 120px; width: 16px; height: 16px;"></div>
+<div class="entity coin" style="left: 200px; top: 120px; width: 16px; height: 16px;"></div>
+
+
+
+
+            </div>
+
+
+            <div id="hud" class="active">
+                <div>SCORE <span id="score-val">0</span></div>
+                <div>COINS <span id="coins-val">0</span></div>
+                <div>HI-SCORE <span id="hi-score-val">0</span></div>
+            </div>
+        </div>
+
+        <div id="start-screen" class="overlay-screen hidden">
+            <div class="menu-box">
+                <h1>MARIO RUN WEB</h1>
+                <p>Endless auto-runner. Press SPACE / UP / W to Jump.</p>
+                <button id="start-btn" class="action-btn">START GAME</button>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="menu-box">
+                <h2 class="danger-text">GAME OVER</h2>
+                <p>You fell! Try to beat the high score.</p>
+                <p>Final Score: <span id="final-score"></span></p>
+                <p>High Score: <span id="high-score"></span></p>
+                <button id="restart-btn" class="action-btn">RETRY</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        // Scale viewport according to parent window resize (to maintain aspect ratio like index.html)
+        const resize = () => {
+            const scale = Math.min(window.innerWidth / 800, window.innerHeight / 400);
+            document.documentElement.style.setProperty('--scale', scale);
+        };
+        window.onresize = resize;
+        window.onload = resize;
+    </script> -->
+    <script src="game.js"></script>
+</body>
+
+</html>
